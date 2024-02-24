@@ -5,13 +5,13 @@
   box-sizing: border-box;
   font-family: consolas;
 }
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
   
 
-}
+} */
 .container {
   position: relative;
   display: flex;
@@ -19,16 +19,18 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 40px 0;
+  /* z-index: 34; */
 }
 .container .box {
   position: relative;
-  width: 380px;
+  width: 350px;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 40px 30px;
   transition: 0.5s;
+  
 }
 .container .box::before {
   content: "";
@@ -55,7 +57,7 @@ body {
   transform: skewX(15deg);
   transition: 0.5s;
   filter: blur(30px);
-  z-index: -1;
+  z-index: 1;
 }
 .container .box:hover::before,
 .container .box:hover::after {
@@ -93,7 +95,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 50;
+  z-index: 100;
   pointer-events: none;
 }
 .container .box span::before {
@@ -158,7 +160,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   backdrop-filter: blur(5px);
-  z-index: 1;
+  z-index: 51;
   transition: 0.5s;
   color: #fff;
 }
